@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-
-for chars in range(97, 123):
-    print("{}".format(chr(chars)), end="")
+for letters in range(ord('a'), ord('z') + 1):
+    print("{:s}".format(chr(letters)), end="")
