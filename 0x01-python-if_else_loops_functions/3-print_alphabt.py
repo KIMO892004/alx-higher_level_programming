@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-for k in range(ord('a'), ord('z') + 1):
-    if chr(k) == 'e' or chr(k) == 'q':
+for i in range(97, 123):
+    if chr(i) == 'q' or chr(i) == 'e':
         continue
-    else:
-        print("{:s}".format(chr(k)), end='')
+    print(chr(i).format(i), end='')
