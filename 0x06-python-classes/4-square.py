@@ -7,16 +7,16 @@ class Square:
     the Attributes:
         __size (int): size of a side of the square
     """
-    def __init__(myself, mysize=0):
+    def __init__(self, size=0):
         """initializes the square
        the Args:
             the size (int): size of a side of the square
         Returns:
             None
         """
-       self.mysize = mysize
+       self.size = size
 
-    def area(myself):
+    def area(self):
         """calculating the square's area
         Returns:
             The area of the square
@@ -24,7 +24,7 @@ class Square:
         return (self.__size) ** 2
 
     @property
-    def size(myself):
+    def size(self):
         """the getter of __size
         Returns:
             The size of the square
@@ -32,10 +32,10 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(myself, myvalue):
+    def size(self, myvalue):
         """the setter of __size
         Args:
-            the value (int): the size of a size of the square
+            the myvalue (int): the size of a size of the square
         Returns:
             None
         """
