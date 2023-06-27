@@ -14,7 +14,7 @@ class Square:
         Returns:
             None
         """
-        self.size = mysize
+       myself.mysize = mysize
 
     def area(myself):
         """calculating the square's area
@@ -29,7 +29,7 @@ class Square:
         Returns:
             The size of the square
         """
-        return self.__size
+        return myself.__size
 
     @size.setter
     def size(myself, myvalue):
@@ -42,8 +42,8 @@ class Square:
         if type(myvalue) is not int:
             raise TypeError("size must be an integer")
         else:
-            if value < 0:
+            if myvalue < 0:
                 raise ValueError("size must be >= 0")
             else:
-                self.__size = myvalue
+                myself.__size = myvalue
 
