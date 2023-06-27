@@ -29,7 +29,7 @@ class Square:
         Returns:
             The size of the square
         """
-        return myself.__size
+        return self.__size
 
     @size.setter
     def size(myself, myvalue):
@@ -46,4 +46,3 @@ class Square:
                 raise ValueError("size must be >= 0")
             else:
                 self.__size = myvalue
-
