@@ -14,7 +14,7 @@ class Square:
         Returns:
             None
         """
-        myself.size = mysize
+        myself.mysize = mysize
 
     def area(myself):
         """calculating the square's area
@@ -24,15 +24,15 @@ class Square:
         return (myself.__size) ** 2
 
     @property
-    def size(self):
+    def mysize(myself):
         """getter of __size
         Returns:
             The size of the square
         """
         return self.__size
 
-    @size.setter
-    def size(myself, myvalue):
+    @mysize.setter
+    def mysize(myself, myvalue):
         """the setter of __size
         the Args:
            the value (int): the size of a size of the square
