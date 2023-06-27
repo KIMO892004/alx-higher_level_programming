@@ -14,14 +14,14 @@ class Square:
         Returns:
             None
         """
-       myself.mysize = mysize
+       self.mysize = mysize
 
     def area(myself):
         """calculating the square's area
         Returns:
             The area of the square
         """
-        return (myself.__size) ** 2
+        return (self.__size) ** 2
 
     @property
     def size(myself):
@@ -45,5 +45,5 @@ class Square:
             if myvalue < 0:
                 raise ValueError("size must be >= 0")
             else:
-                myself.__size = myvalue
+                self.__size = myvalue
 
