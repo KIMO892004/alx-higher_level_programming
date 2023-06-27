@@ -32,17 +32,17 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, myvalue):
+    def size(self, thevalue):
         """ setter of __size
         the Args:
-            the myvalue (int): the size of a size of the square
+            thevalue (int): the size of a size of the square
         Returns:
             None
         """
-        if type(myvalue) is not int:
+        if type(thevalue) is not int:
             raise TypeError("size must be an integer")
         else:
-            if myvalue < 0:
+            if thevalue < 0:
                 raise ValueError("size must be >= 0")
             else:
-                self.__size = myvalue
+                self.__size = thevalue
