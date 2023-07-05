@@ -49,10 +49,10 @@ if __name__ == "__main__":
 
     def nqueens(x):
         """recursiving backtracking function to find the solution"""
-        for j in range(n):
+        for y in range(n):
             clear_a(x)
-            if reject(x, j):
-                a[x][1] = j
+            if reject(x, y):
+                a[x][1] = y
                 if (x == n - 1):  # accepts the solution
                     print(a)
                 else:
