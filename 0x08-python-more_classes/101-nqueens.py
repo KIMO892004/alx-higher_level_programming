@@ -8,7 +8,7 @@ on an nxn grid such that they are all in non-attacking positions
 from sys import argv
 
 if __name__ == "__main__":
-    k = []
+    a = []
     if len(argv) != 2:
         print("Usage: nqueens N")
         exit(1)
@@ -21,13 +21,13 @@ if __name__ == "__main__":
         exit(1)
 
     # initializing the answer list
-    for r in range(n):
-        k.append([r, None])
+    for k in range(n):
+        a.append([k, None])
 
     def already_exists(y):
-        """checking that a queen does not already exist in that y value"""
+        """check that a queen does not already exist in that y value"""
         for x in range(n):
-            if y == k[x][1]:
+            if y == a[x][1]:
                 return True
         return False
 
@@ -35,28 +35,28 @@ if __name__ == "__main__":
         """determining whether or not to reject the solution"""
         if (already_exists(y)):
             return False
-        r = 0
-        while(r < x):
-            if abs(k[r][1] - y) == abs(r - x):
+        k = 0
+        while(k < x):
+            if abs(a[k][1] - y) == abs(k - x):
                 return False
-            r += 1
+            k += 1
         return True
 
     def clear_a(x):
         """clearing the answers from the point of failure on"""
-        for r in range(x, n):
-            k[r][1] = None
+        for k in range(x, n):
+            a[k][1] = None
 
     def nqueens(x):
         """recursiving backtracking function to find the solution"""
-        for y in range(n):
+        for j in range(n):
             clear_a(x)
-            if reject(x, y):
-                k[x][1] = y
-                if (x == n - 1):  # accepting the solution
-                    print(k)
+            if reject(x, j):
+                a[x][1] = j
+                if (x == n - 1):  # accepts the solution
+                    print(a)
                 else:
-                    nqueens(x + 1)  # moveing on to next x value to continue
+                    nqueens(x + 1)  # moves on to next x value to continue
 
     # starting the recursive process at x = 0
     nqueens(0)
