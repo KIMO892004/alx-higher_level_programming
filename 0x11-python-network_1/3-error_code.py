@@ -3,10 +3,10 @@
 Usage: ./3-error_code.py <URL>
   - Handles HTTP errors.
 """
-
 import sys
 import urllib.error
 import urllib.request
+
 
 
 if __name__ == "__main__":

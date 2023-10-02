@@ -3,12 +3,10 @@
 Usage: ./2-post_email.py <URL> <email>
   - Displays the body of the response.
 """
-
-
-
 import sys
 import urllib.parse
 import urllib.request
+
 
 
 if __name__ == "__main__":
