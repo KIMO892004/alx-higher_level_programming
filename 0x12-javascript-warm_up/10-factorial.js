@@ -1,17 +1,6 @@
 #!/usr/bin/node
-
-function fact (f) {
-  if (isNaN(f)) {
-    return 1;
-  }
-  if (f <= 1) {
-    return 1;
-  } else {
-    return f * fact(f - 1);
-  }
+function factorial (n) {
+  return n === 0 || isNaN(n) ? 1 : n * factorial(n - 1);
 }
 
-const arg = process.argv[2];
-const num = parseInt(arg);
-
-console.log(fact(num));
+console.log(factorial(Number(process.argv[2])));
